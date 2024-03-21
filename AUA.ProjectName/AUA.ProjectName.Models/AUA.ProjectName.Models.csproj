@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<NoWarn>1701;1702;1591;8618;</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591;8618;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\AUA.ProjectName.DomainEntities\AUA.ProjectName.DomainEntities.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="AUA.Mapping">
+	    <HintPath>..\AUAInfra\AUA.Mapping.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
