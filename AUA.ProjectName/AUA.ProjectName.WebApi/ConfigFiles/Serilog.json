@@ -1,0 +1,49 @@
+{
+  "Serilog": {
+    "Using": [
+      "Serilog",
+      "Serilog.Sinks.File",
+      "Serilog.Exceptions",
+      "Serilog.Sinks.Console",
+      "Serilog.Sinks.Elasticsearch"
+    ],
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "System": "Information",
+        "Microsoft": "Warning"
+      }
+    },
+    "WriteTo": [
+      //{ "Name": "Console" },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "logs/aua-.log",
+          "fileSizeLimitBytes": 52428800,
+          "retainedFileCountLimit": 60,
+          "rollingInterval": "Day",
+          "rollOnFileSizeLimit": "true",
+          "outputTemplate": "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff} {Level:u3} {ThreadId:000}] {Message:lj}{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "MSSqlServer",
+        "Args": {
+          "connectionString": "Data Source=.;Initial Catalog=AUALog;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True",
+          "tableName": "Logs",
+          "outputTemplate": "[{Timestamp:yyyy-MM-dd HH:mm:ss.fff} {Level:u3} {ThreadId:000}] {Message:lj}{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "Elasticsearch",
+        "Args": {
+          "nodeUris": "http://localhost:9200",
+          "indexFormat": "aua-logs-{0:yyyy.MM}",
+          "autoRegisterTemplate": true,
+          "autoRegisterTemplateVersion": "ESv6"
+        }
+      }
+    ]
+  }
+}

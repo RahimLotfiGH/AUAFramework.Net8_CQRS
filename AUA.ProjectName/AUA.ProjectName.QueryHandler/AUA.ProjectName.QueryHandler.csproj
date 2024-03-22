@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<NoWarn>1701;1702;1591;8618;</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<NoWarn>1701;1702;1591;8618;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\AUA.ProjectName.Infrastructure\AUA.ProjectName.Infrastructure.csproj" />
+    <ProjectReference Include="..\AUA.ProjectName.Services\AUA.ProjectName.Services.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="AUA.Infrastructure">
+	    <HintPath>..\AUAInfra\AUA.Infrastructure.dll</HintPath>
+	  </Reference>
+	  <Reference Include="AUA.Mapping">
+	    <HintPath>..\AUAInfra\AUA.Mapping.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>
