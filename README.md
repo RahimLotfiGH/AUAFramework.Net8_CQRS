@@ -17,7 +17,7 @@ Make sure you have the following tools installed on your machine:
 1) Clone the project from your desired GitHub repository :
 
    ```bash
-   git clone https://github.com/RahimLotfiGH/AUAFramework.Net8_CQRS
+   git clone https://github.com/RahimLotfiGH/AUAFramework.Net8_CQRS.git
 <br>
 2. Build Docker Image: Navigate to the project directory and build the Docker Image. This is done using the docker build command.
  <br>
