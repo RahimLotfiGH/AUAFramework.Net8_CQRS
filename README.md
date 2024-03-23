@@ -11,24 +11,30 @@ AUA is a open source web application framework for Asp.Net Core 8. Using the AUA
 ###  Running the application : 
 Make sure you have the following tools installed on your machine:
 <br>
-<h4>.NET 8 SDK  Docker </h4>
-
+<h5>.NET 8 SDK  Docker </h5>
+<hr>
 
 1) Clone the project from your desired GitHub repository :
 
    ```bash
    git clone https://github.com/RahimLotfiGH/AUAFramework.Net8_CQRS.git
 <br>
-2. Build Docker Image: Navigate to the project directory and build the Docker Image. This is done using the docker build command.
+2. Build Docker Image :
+<br>
+Navigate to the project directory and build the Docker Image. This is done using the docker build command.
  <br>
  <br>
-3. Run Docker Container: After building the Docker Image, you can create and run a Docker Container from it. This is done using the docker run command.
+3. Run Docker Container :
+<br>
+After building the Docker Image, you can create and run a Docker Container from it. This is done using the docker run command.
 <br>
 <br>
-4.Test the Application: Your application should now be running inside the Docker Container.
+4.Test the Application : 
+<br>
+Your application should now be running inside the Docker Container.
 <br>
 <hr>
- ⭐ Star the Project :
+<h3>⭐ Star the Project :</h3> 
  <br>
 If you find this project helpful , please consider giving it a star on GitHub. Thanks🙏
 
