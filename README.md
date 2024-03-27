@@ -1,6 +1,9 @@
 # AUA framework .Net 8 (CQS/CQRS)
 AUA framework .Net 8 (CQS/CQRS)
 
+# Asp.Net Unique Architecture
+AUA ( Asp.Net Unique Architecture ) is a ready-to-use framework for ASP.NET Core with repositories, services, models mapping, user access, reporting, exception handling, webAip, and MVC,... Using the AUA framework, you can easily have better, faster, and more orderly and focused coding. This framework is based on new and up-to-date concepts, structures, and architectures, including Clean Architecture, Clean Code, Domain-driven design (DDD), Lmax Architecture, SOLID Principle, Code Refactoring, and GRASP (object-oriented design principle). Using the AUA ( Asp.Net Unique Architecture ) framework, you can easily have better, faster, and more orderly and focused coding. 
+
 # AUA Login Info:
 Username: admin
 <br/>
@@ -23,3 +26,13 @@ When reading data from different aggregates, it is recommended to use Dynamic ag
 UnitOfWork is a Runtime block, and it is created at runtime like the call stack and cannot be New manually. 
 Otherwise, it becomes very difficult to manage different transaction states such as nested transactions, and certain scenarios cause Deadlock and extreme slowness.
 This problem is well solved in the AUA Framework.
+
+
+You can see the web site for more details. <br/>
+Site : <br/>
+https://auaframework.com/Document/Introduction
+
+Video : <br/>
+https://auaframework.com/Document/VideoTutorial
+
+# Documentation is being completed...
