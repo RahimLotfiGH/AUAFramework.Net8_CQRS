@@ -1,4 +1,4 @@
-# AUA framework .Net 8 (CQS/CQRS)
+# AUA framework .Net 8 (CQS/CQRS-Domain-Driven Design(DDD))
 AUA framework .Net 8 (CQS/CQRS)
 
 # Asp.Net Unique Architecture
