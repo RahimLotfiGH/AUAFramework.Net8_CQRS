@@ -23,7 +23,7 @@ When reading data from different aggregates, it is recommended to use Dynamic ag
 
 # DbContext
 we use one dbContext for reading and writing based on this article.
-<a target="_blank" href='https://www.linkedin.com/pulse/cqrs-implementation-story-rahim-lotfi-ffy3f/?trackingId=ETZdQKTSTf6QYHDJG5dplw%3D%3D'>
+<a  href='https://www.linkedin.com/pulse/cqrs-implementation-story-rahim-lotfi-ffy3f/?trackingId=ETZdQKTSTf6QYHDJG5dplw%3D%3D' target='_blank' >
 CQRS Implementation Story
 </a>
 
