@@ -21,6 +21,11 @@ To avoid such problems, it is suggested to design aggregates small, and you can 
 Dynamic aggregate allows you to combine aggregates and load them dynamically at runtime. Dynamic aggregate makes it possible to load data from different aggregates at high speed without changing the primary aggregates.
 When reading data from different aggregates, it is recommended to use Dynamic aggregate to reduce the number of I/O.
 
+# DbContext
+we use one dbContext for reading and writing based on this article.
+<a target="_blank" href='https://www.linkedin.com/pulse/cqrs-implementation-story-rahim-lotfi-ffy3f/?trackingId=ETZdQKTSTf6QYHDJG5dplw%3D%3D'>
+CQRS Implementation Story
+</a>
 
 # UnitOfWork
 UnitOfWork is a Runtime block, and it is created at runtime like the call stack and cannot be New manually. 
