@@ -2,7 +2,7 @@
 AUA framework .Net 8 (CQS/CQRS)
 
 # Asp.Net Unique Architecture
-AUA ( Asp.Net Unique Architecture ) is a ready-to-use framework for ASP.NET Core with repositories, services, models mapping, user access, reporting, exception handling, webAip, and MVC,... Using the AUA framework, you can easily have better, faster, and more orderly and focused coding. This framework is based on new and up-to-date concepts, structures, and architectures, including Clean Architecture, Clean Code, Domain-driven design (DDD), Lmax Architecture, SOLID Principle, Code Refactoring, and GRASP (object-oriented design principle). Using the AUA ( Asp.Net Unique Architecture ) framework, you can easily have better, faster, and more orderly and focused coding. 
+AUA ( Asp.Net Unique Architecture ) is a ready-to-use framework for ASP.NET Core with repositories, services, models mapping, user access, reporting, exception handling, webApi, and MVC,... Using the AUA framework, you can easily have better, faster, and more orderly and focused coding. This framework is based on new and up-to-date concepts, structures, and architectures, including Clean Architecture, Clean Code, Domain-driven design (DDD), Lmax Architecture, SOLID Principle, Code Refactoring, and GRASP (object-oriented design principle). Using the AUA ( Asp.Net Unique Architecture ) framework, you can easily have better, faster, and more orderly and focused coding. 
 
 # AUA Login Info:
 Username: admin
