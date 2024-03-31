@@ -3,6 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUA.ProjectName.WebApi", "AUA.ProjectName.WebApi\AUA.ProjectName.WebApi.csproj", "{43239E2E-AE61-4EDB-A6F6-5ACEC5D25347}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainEntities", "DomainEntities", "{1E687F27-E5E7-48C5-BB00-C963556DA8D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUA.ProjectName.DomainEntities", "AUA.ProjectName.DomainEntities\AUA.ProjectName.DomainEntities.csproj", "{572E3726-C52C-4B92-8A9E-09E5B94139A8}"
@@ -46,9 +49,7 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUA.ProjectName.Reports", "AUA.ProjectName.Reports\AUA.ProjectName.Reports.csproj", "{E52305C2-C312-4A4F-AC1A-6FDB50C488B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebEndpoints", "WebEndpoints", "{C2886585-58C8-4921-AC79-F69A9CBA90C6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AUA.ProjectName.WebApi", "AUA.ProjectName.WebApi\AUA.ProjectName.WebApi.csproj", "{43239E2E-AE61-4EDB-A6F6-5ACEC5D25347}"
-EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
