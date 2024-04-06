@@ -1,7 +1,7 @@
 ﻿using AUA.ProjectName.Commands.Commands.Accounting.AppUserCommands.Insert;
 using AUA.ProjectName.Commands.Mapping.Accounting;
 using AUA.ProjectName.Common.Extensions.ValidationExtensions;
-using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Accounting;
+using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 using AUA.ProjectName.Infrastructure.PipelineBehaviors.Attributes;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
 using AUA.ProjectName.Models.DomainEvents.Accounting;
@@ -11,7 +11,7 @@ using AUA.ProjectName.Services.EntitiesService.Accounting.Contracts;
 namespace AUA.ProjectName.CommandHandler.CommandHandlers.Accounting.AppUserCommandHandlers
 {
     [Transaction]
-    public class InsertAppUserCommandHandler : AccountingCommandHandler<InsertAppUserCommand, long>
+    public class InsertAppUserCommandHandler : BaseCommandHandler<InsertAppUserCommand, long>
     {
         private readonly IAppUserService _appUserService;
         private readonly IAccountService _accountService;

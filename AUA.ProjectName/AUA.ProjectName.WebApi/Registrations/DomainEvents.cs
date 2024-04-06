@@ -1,8 +1,6 @@
 ﻿using System.Threading.Channels;
-using AUA.ProjectName.Models.DomainEvents.Accounting;
-using AUA.ProjectName.Models.DomainEvents.AppUsers;
 using AUA.ProjectName.Models.DomainEvents.AuditLog;
-using AUA.ProjectName.Models.DomainEvents.General;
+using AUA.ProjectName.Models.DomainEvents.Base;
 
 namespace AUA.ProjectName.WebApi.Registrations
 {
@@ -11,22 +9,17 @@ namespace AUA.ProjectName.WebApi.Registrations
         public static void RegistrationDomainEvents(this IServiceCollection services)
         {
 
-            services.RegistrationAccountingDomainEvent();
-
-            services.RegistrationCommandDomainEvent();
+            services.RegistrationDomainEvent();
 
             services.RegistrationAuditLogDomainEvent();
 
             services.RegistrationFullAuditLogDomainEvent();
 
-            services.RegistrationCreatedAccountDomainEventDomainEvent();
-
-            services.RegistrationCreatedAppUserDomainEventDomainEvent();
         }
 
-        private static void RegistrationAccountingDomainEvent(this IServiceCollection services)
+        private static void RegistrationDomainEvent(this IServiceCollection services)
         {
-            var bus = Channel.CreateBounded<LoginDomainEvent>(new BoundedChannelOptions(10)
+            var bus = Channel.CreateBounded<IDomainEvent>(new BoundedChannelOptions(10)
             {
                 FullMode = BoundedChannelFullMode.Wait
             });
@@ -34,15 +27,6 @@ namespace AUA.ProjectName.WebApi.Registrations
             services.AddSingleton(bus);
         }
 
-        private static void RegistrationCommandDomainEvent(this IServiceCollection services)
-        {
-            var bus = Channel.CreateBounded<ActionDomainEvent>(new BoundedChannelOptions(1000)
-            {
-                FullMode = BoundedChannelFullMode.DropOldest
-            });
-
-            services.AddSingleton(bus);
-        }
 
         private static void RegistrationFullAuditLogDomainEvent(this IServiceCollection services)
         {
@@ -63,24 +47,5 @@ namespace AUA.ProjectName.WebApi.Registrations
             services.AddSingleton(bus);
         }
 
-        private static void RegistrationCreatedAccountDomainEventDomainEvent(this IServiceCollection services)
-        {
-            var bus = Channel.CreateBounded<CreatedAccountDomainEvent>(new BoundedChannelOptions(1000)
-            {
-                FullMode = BoundedChannelFullMode.Wait
-            });
-
-            services.AddSingleton(bus);
-        }
-
-        private static void RegistrationCreatedAppUserDomainEventDomainEvent(this IServiceCollection services)
-        {
-            var bus = Channel.CreateBounded<CreatedAppUserDomainEvent>(new BoundedChannelOptions(1000)
-            {
-                FullMode = BoundedChannelFullMode.Wait
-            });
-
-            services.AddSingleton(bus);
-        }
     }
 }

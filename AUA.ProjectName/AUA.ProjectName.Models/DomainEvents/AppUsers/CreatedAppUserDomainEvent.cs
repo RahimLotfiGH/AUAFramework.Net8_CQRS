@@ -2,7 +2,7 @@
 
 namespace AUA.ProjectName.Models.DomainEvents.AppUsers
 {
-    public record CreatedAppUserDomainEvent : BaseDomainEvent
+    public record CreatedAppUserDomainEvent : DomainEvent
     {
         public long? UserId { get; set; }
 

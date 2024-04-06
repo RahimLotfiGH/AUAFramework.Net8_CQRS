@@ -1,14 +1,14 @@
 ﻿using System.Threading.Channels;
-using AUA.ProjectName.Models.DomainEvents.Accounting;
+using AUA.ProjectName.Models.DomainEvents.Base;
 using Microsoft.Extensions.Hosting;
 
-namespace AUA.ProjectName.BackgroundServices.DomainEventHandlers.Accounting
+namespace AUA.ProjectName.BackgroundServices.DomainEventHandlers.DomainEventHandler
 {
-    public class CreatedAccountDomainEventHandlers : BackgroundService
+    public class DomainEventHandlers : BackgroundService
     {
-        private readonly Channel<CreatedAccountDomainEvent> _eventBus;
+        private readonly Channel<IDomainEvent> _eventBus;
 
-        public CreatedAccountDomainEventHandlers(Channel<CreatedAccountDomainEvent> bus)
+        public DomainEventHandlers(Channel<IDomainEvent> bus)
         {
             _eventBus = bus;
         }

@@ -2,7 +2,7 @@
 
 namespace AUA.ProjectName.Models.DomainEvents.AuditLog
 {
-    public record AuditLogDomainEvent: BaseDomainEvent
+    public record AuditLogDomainEvent: DomainEvent
     {
         public string CommandName { get; set; }
 

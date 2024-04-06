@@ -2,7 +2,7 @@
 
 namespace AUA.ProjectName.Models.DomainEvents.General
 {
-    public record ActionDomainEvent : BaseDomainEvent
+    public record ActionDomainEvent : DomainEvent
     {
         public long? UserId { get; set; }
 

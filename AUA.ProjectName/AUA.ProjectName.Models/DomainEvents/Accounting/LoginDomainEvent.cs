@@ -2,7 +2,7 @@
 
 namespace AUA.ProjectName.Models.DomainEvents.Accounting
 {
-    public record LoginDomainEvent : BaseDomainEvent
+    public record LoginDomainEvent : DomainEvent
     {
         public long? UserId { get; set; }
 

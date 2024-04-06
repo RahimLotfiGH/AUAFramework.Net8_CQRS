@@ -1,6 +1,6 @@
 ﻿using AUA.ProjectName.Commands.Commands.Accounting.IdentityCommands.Login;
 using AUA.ProjectName.Common.Extensions.ValidationExtensions;
-using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Accounting;
+using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 using AUA.ProjectName.Infrastructure.PipelineBehaviors.Attributes;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
 using AUA.ProjectName.Models.DomainEvents.Accounting;
@@ -12,8 +12,7 @@ namespace AUA.ProjectName.CommandHandler.CommandHandlers.Accounting.IdentityComm
 {
 
     [AuditLog]
-    [Transaction]
-    public class LoginCommandHandler : AccountingCommandHandler<LoginCommand, LoginResponse>
+    public class LoginCommandHandler : BaseCommandHandler<LoginCommand, LoginResponse>
     {
         private readonly IAccessTokenService _accessTokenService;
         private readonly IAccountService _accountService;

@@ -1,13 +1,13 @@
 ﻿using AUA.ProjectName.Commands.Commands.Accounting.Account.ResetPassword;
 using AUA.ProjectName.Common.Tools.Config.JsonSetting;
 using AUA.ProjectName.DomainEntities.Entities.Accounting.AccountAggregate;
-using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Accounting;
+using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
 using AUA.ProjectName.Services.EntitiesService.Accounting.Contracts;
 
 namespace AUA.ProjectName.CommandHandler.CommandHandlers.Accounting.AccountCommandHandlers
 {
-    public class ResetPasswordCommandHandler : AccountingCommandHandler<ResetPasswordCommand, bool>
+    public class ResetPasswordCommandHandler : BaseCommandHandler<ResetPasswordCommand, bool>
     {
         private readonly IAccountService _accountService;
 

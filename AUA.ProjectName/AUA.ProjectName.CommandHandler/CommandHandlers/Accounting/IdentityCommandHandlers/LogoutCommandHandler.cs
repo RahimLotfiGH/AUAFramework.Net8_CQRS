@@ -1,11 +1,11 @@
 ﻿using AUA.ProjectName.Commands.Commands.Accounting.IdentityCommands.Logout;
-using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Accounting;
+using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
 using AUA.ProjectName.Services.GeneralService.Login.Contracts;
 
 namespace AUA.ProjectName.CommandHandler.CommandHandlers.Accounting.IdentityCommandHandlers
 {
-    public class LogoutCommandHandler : AccountingCommandHandler<LogoutCommand, bool>
+    public class LogoutCommandHandler : BaseCommandHandler<LogoutCommand, bool>
     {
         private readonly IAccessTokenService _accessTokenService;
 

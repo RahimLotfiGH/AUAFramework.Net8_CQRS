@@ -5,14 +5,14 @@ using AUA.ProjectName.Common.Extensions;
 using AUA.ProjectName.Common.Extensions.ValidationExtensions;
 using AUA.ProjectName.Common.Tools.Security;
 using AUA.ProjectName.DomainEntities.Entities.Accounting.ActiveAccessTokenAggregate;
-using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Accounting;
+using AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
 using AUA.ProjectName.Services.EntitiesService.Accounting.Contracts;
 using AUA.ProjectName.Services.GeneralService.Login.Contracts;
 
 namespace AUA.ProjectName.CommandHandler.CommandHandlers.Accounting.IdentityCommandHandlers
 {
-    public class RefreshTokenCommandHandler : AccountingCommandHandler<RefreshTokenCommand, RefreshTokenResponse>
+    public class RefreshTokenCommandHandler : BaseCommandHandler<RefreshTokenCommand, RefreshTokenResponse>
     {
         private readonly IAccessTokenService _accessTokenService;
         private readonly IActiveAccessTokenService _activeAccessTokenService;

@@ -1,8 +1,11 @@
-﻿using AUA.Infrastructure.CommandInfra.Handler;
+﻿using System.Threading.Channels;
+using AUA.Infrastructure.CommandInfra.Handler;
+using AUA.Infrastructure.Utilities.ServiceUtilities;
 using AUA.ProjectName.Common.Enums;
 using AUA.ProjectName.Common.Extensions;
 using AUA.ProjectName.Models.BaseModel.BaseValidationModels;
 using AUA.ProjectName.Models.BaseModel.BaseViewModels;
+using AUA.ProjectName.Models.DomainEvents.Base;
 using MediatR;
 
 namespace AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
@@ -10,6 +13,20 @@ namespace AUA.ProjectName.Infrastructure.CommandInfra.Handler.Base;
 public class BaseCommandHandler<TCommand, TResponse> : BaseCommandHandlerInfra<TCommand, TResponse> where TCommand
     : IRequest<ResultModel<TResponse>>
 {
+    private readonly Channel<IDomainEvent> _eventBus;
+
+    protected BaseCommandHandler()
+    {
+        _eventBus = AppServiceFactory.GetService<Channel<IDomainEvent>>();
+
+    }
+
+    protected async Task WriterEventAsync(IDomainEvent message)
+    {
+        await _eventBus.Writer
+            .WriteAsync(message);
+    }
+
 
     protected ResultModel<TResultModel> CreateInvalidResult<TResultModel>(Enum reason) 
     {
