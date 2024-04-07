@@ -4,17 +4,18 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System.Threading.Channels;
 using AUA.Infrastructure.Utilities.ServiceUtilities;
 using AUA.ProjectName.Common.Extensions;
+using AUA.ProjectName.Models.DomainEvents.Base;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AUA.ProjectName.WebApi.Utility.ActionFilters
 {
     public class LoggingRequest : Attribute, IAsyncActionFilter
     {
-        private readonly Channel<ActionDomainEvent> _commandDomainEventBus;
+        private readonly Channel<IDomainEvent> _commandDomainEventBus;
 
         public LoggingRequest()
         {
-            _commandDomainEventBus = AppServiceFactory.GetService<Channel<ActionDomainEvent>>(); ;
+            _commandDomainEventBus = AppServiceFactory.GetService<Channel<IDomainEvent>>(); ;
         }
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
