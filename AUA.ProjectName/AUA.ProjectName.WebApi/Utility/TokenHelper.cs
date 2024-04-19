@@ -1,4 +1,5 @@
-﻿using AUA.ProjectName.WebApi.Utility.Extensions;
+﻿using AUA.ProjectName.Common.Consts;
+using AUA.ProjectName.WebApi.Utility.Extensions;
 
 namespace AUA.ProjectName.WebApi.Utility
 {
@@ -10,7 +11,8 @@ namespace AUA.ProjectName.WebApi.Utility
             var userId = context.User
                           .Identity!.GetUserId();
 
-            return long.Parse(userId);
+            return string.IsNullOrWhiteSpace(userId) ?
+                DefaultValueConsts.SystemUserId : long.Parse(userId);
         }
 
         public static long GetAccountId(this HttpContext context)

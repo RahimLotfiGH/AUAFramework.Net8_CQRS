@@ -9,12 +9,20 @@ namespace AUA.ProjectName.WebApi.Utility.Extensions
         public static string FindFirstValue(this IIdentity identity, string claimType)
         {
             var claimsIdentity = identity as ClaimsIdentity;
-            return claimsIdentity!.FindFirstValue(claimType);
+
+            return claimsIdentity == null? 
+                   string.Empty: 
+                   claimsIdentity.FindFirstValue(claimType);
         }
 
         public static string FindFirstValue(this ClaimsIdentity identity, string claimType)
         {
-            return identity.FindFirst(claimType)!.Value;
+            var claimClaims = identity.FindFirst(claimType);
+
+            return claimClaims == null ? 
+                   string.Empty :
+                   identity.FindFirst(claimType)!.Value;
+
         }
 
         public static string GetClientId(this IIdentity identity)
