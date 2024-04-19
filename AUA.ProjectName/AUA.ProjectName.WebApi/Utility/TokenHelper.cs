@@ -12,7 +12,7 @@ namespace AUA.ProjectName.WebApi.Utility
                           .Identity!.GetUserId();
 
             return string.IsNullOrWhiteSpace(userId) ?
-                DefaultValueConsts.SystemUserId : long.Parse(userId);
+                   DefaultValueConsts.SystemUserId : long.Parse(userId);
         }
 
         public static long GetAccountId(this HttpContext context)
