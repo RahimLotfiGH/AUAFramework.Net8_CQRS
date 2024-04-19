@@ -20,6 +20,43 @@ To avoid such problems, it is suggested to design aggregates small, and you can 
 
 Dynamic aggregate allows you to combine aggregates and load them dynamically at runtime. Dynamic aggregate makes it possible to load data from different aggregates at high speed without changing the primary aggregates.
 When reading data from different aggregates, it is recommended to use Dynamic aggregate to reduce the number of I/O.
+<br/>
+-Challenges with Traditional Aggregate Design:
+
+   1.Changing Requirements: 
+   Initial aggregate designs may not be suitable for future requirements, leading to performance issues and complex queries.
+
+  2.Complex Query Performance:
+   As aggregates grow or change, querying them can become complex and slow, affecting system performance.
+
+   3.Data Loading: There might be a need to load additional data, which can further impact performance.
+
+    4.Development Time and Cost: 
+    Changes to aggregates can spread across different parts of the software, increasing development time and costs.
+
+    5.Database Specifics:
+    Depending on the type of database used (e.g., SQL Server, MongoDB), fetching order and loading requirements might need adjustments for performance optimization.
+
+- Benefits of Dynamic Aggregate Design:
+
+ 1. Flexibility:
+   Dynamic aggregates allow for combining and loading aggregates dynamically at runtime, adapting to changing requirements without altering primary aggregates.
+
+   2. Performance Optimization: 
+   By utilizing dynamic aggregates, you can reduce the number of I/O operations when reading data from different aggregates, improving system performance.
+
+   3.  Reduced Complexity:
+    Dynamic aggregates can help in simplifying the design by making it easier to adapt to various scenarios without overcomplicating the aggregate structure.
+
+# Recommendations:
+
+ 1.Design Smaller Aggregates: 
+  Instead of designing large, monolithic aggregates, it's beneficial to design smaller aggregates that can be combined dynamically as needed.
+
+ 2.Use Dynamic Aggregates:
+   Adopting Dynamic Aggregate-DDD can help mitigate the challenges associated with evolving requirements and performance optimization.
+
+In summary, Dynamic Aggregate-DDD offers a more flexible and adaptable approach to aggregate design, addressing the challenges of changing requirements, performance optimization, and complexity associated with traditional aggregate designs. By designing smaller aggregates and leveraging dynamic capabilities, you can build more resilient and efficient systems that can adapt to evolving business needs.
 
 # DbContext
 we use one dbContext for reading and writing based on this article.
